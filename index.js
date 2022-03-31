@@ -1,8 +1,7 @@
+// -- card
+
 const cardButtonAnswer = document.querySelector(
   '[data-js="card-button-answer"]'
-);
-const cardButtonBookmark = document.querySelector(
-  '[data-js="card-button-bookmark"]'
 );
 const cardAnswer = document.querySelector('[data-js="card-answer"]');
 
@@ -20,6 +19,10 @@ cardButtonAnswer.addEventListener("click", () => {
   }
 });
 
-cardButtonBookmark.addEventListener("click", () => {
-  cardButtonBookmark.classList.toggle("card__button-bookmark--active");
+// -- bookmark
+
+const bookmark = document.querySelector('[data-js="bookmark"]');
+
+bookmark.addEventListener("click", () => {
+  bookmark.classList.toggle("bookmark--active");
 });
