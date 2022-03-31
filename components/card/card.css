@@ -1,0 +1,50 @@
+.card {
+  background: var(--primary-light);
+  padding: 2rem;
+  position: relative;
+}
+
+.card__question {
+  margin: 0 0 3rem 0;
+}
+
+.card__button-answer {
+  background: var(--secondary);
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  display: none;
+}
+
+.card__button-answer--active {
+  display: block;
+}
+
+.card__answer {
+  padding: 2rem;
+  font-style: italic;
+  display: none;
+}
+
+.card__answer--active {
+  display: block;
+}
+
+.card__button-bookmark {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background: var(--secondary);
+  color: var(--white);
+  position: absolute;
+  right: 1rem;
+  top: -1.5rem;
+}
+
+.card__button-bookmark--active {
+  color: var(--primary);
+}
+
+.card__button-bookmark svg {
+  fill: currentColor;
+}
