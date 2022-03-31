@@ -13,11 +13,6 @@
   border: none;
   width: 100%;
   padding: 1rem;
-  display: none;
-}
-
-.card__button-answer--active {
-  display: block;
 }
 
 .card__answer {
