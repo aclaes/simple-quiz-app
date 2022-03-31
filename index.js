@@ -1,27 +1,23 @@
-const cardButtonShowAnswer = document.querySelector(
-  '[data-js="card-button-show"]'
-);
-const cardButtonHideAnswer = document.querySelector(
-  '[data-js="card-button-hide"]'
+const cardButtonAnswer = document.querySelector(
+  '[data-js="card-button-answer"]'
 );
 const cardButtonBookmark = document.querySelector(
   '[data-js="card-button-bookmark"]'
 );
 const cardAnswer = document.querySelector('[data-js="card-answer"]');
 
-console.log(cardButtonShowAnswer);
-console.log(cardButtonHideAnswer);
+let isAnswerShown = false;
 
-cardButtonShowAnswer.addEventListener("click", () => {
-  cardButtonShowAnswer.classList.remove("card__button-answer--active");
-  cardButtonHideAnswer.classList.add("card__button-answer--active");
-  cardAnswer.classList.add("card__answer--active");
-});
+cardButtonAnswer.addEventListener("click", () => {
+  isAnswerShown = !isAnswerShown;
 
-cardButtonHideAnswer.addEventListener("click", () => {
-  cardButtonShowAnswer.classList.add("card__button-answer--active");
-  cardButtonHideAnswer.classList.remove("card__button-answer--active");
-  cardAnswer.classList.remove("card__answer--active");
+  if (isAnswerShown) {
+    cardButtonAnswer.textContent = "Hide answer";
+    cardAnswer.classList.add("card__answer--active");
+  } else {
+    cardButtonAnswer.textContent = "Show answer";
+    cardAnswer.classList.remove("card__answer--active");
+  }
 });
 
 cardButtonBookmark.addEventListener("click", () => {
