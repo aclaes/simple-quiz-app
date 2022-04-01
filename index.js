@@ -1,28 +1,13 @@
-// -- card
+import Bookmark from "./components/bookmark/bookmark.js";
+import Card from "./components/card/card.js";
 
-const cardButtonAnswer = document.querySelector(
-  '[data-js="card-button-answer"]'
-);
-const cardAnswer = document.querySelector('[data-js="card-answer"]');
+const bookmarkElements = document.querySelectorAll('[data-js="bookmark"]');
+const cardElements = document.querySelectorAll('[data-js="card"]');
 
-let isAnswerShown = false;
-
-cardButtonAnswer.addEventListener("click", () => {
-  isAnswerShown = !isAnswerShown;
-
-  if (isAnswerShown) {
-    cardButtonAnswer.textContent = "Hide answer";
-    cardAnswer.classList.add("card__answer--active");
-  } else {
-    cardButtonAnswer.textContent = "Show answer";
-    cardAnswer.classList.remove("card__answer--active");
-  }
+bookmarkElements.forEach((element) => {
+  Bookmark(element);
 });
 
-// -- bookmark
-
-const bookmark = document.querySelector('[data-js="bookmark"]');
-
-bookmark.addEventListener("click", () => {
-  bookmark.classList.toggle("bookmark--active");
+cardElements.forEach((cardElement) => {
+  Card(cardElement);
 });
