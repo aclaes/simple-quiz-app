@@ -1,13 +1,13 @@
-import Bookmark from "./components/bookmark/bookmark.js";
-import Card from "./components/card/card.js";
+import Bookmark from './components/bookmark/bookmark.js';
+import Card from './components/card/card.js';
 
 const bookmarkElements = document.querySelectorAll('[data-js="bookmark"]');
 const cardElements = document.querySelectorAll('[data-js="card"]');
 
-bookmarkElements.forEach((element) => {
+bookmarkElements.forEach(element => {
   Bookmark(element);
 });
 
-cardElements.forEach((cardElement) => {
+cardElements.forEach(cardElement => {
   Card(cardElement);
 });
