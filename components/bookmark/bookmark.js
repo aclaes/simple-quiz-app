@@ -1,5 +1,6 @@
 export default function Bookmark(bookmarkElement) {
-  bookmarkElement.addEventListener("click", () => {
-    bookmarkElement.classList.toggle("bookmark--active");
+  bookmarkElement.addEventListener('click', () => {
+    console.log('test');
+    bookmarkElement.classList.toggle('bookmark--active');
   });
 }

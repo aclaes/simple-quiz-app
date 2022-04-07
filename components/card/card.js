@@ -6,15 +6,15 @@ export default function Card(cardElement) {
 
   let isAnswerShown = false;
 
-  cardButtonAnswer.addEventListener("click", () => {
+  cardButtonAnswer.addEventListener('click', () => {
     isAnswerShown = !isAnswerShown;
 
     if (isAnswerShown) {
-      cardButtonAnswer.textContent = "Hide answer";
-      cardAnswer.classList.add("card__answer--active");
+      cardButtonAnswer.textContent = 'Hide answer';
+      cardAnswer.classList.add('card__answer--active');
     } else {
-      cardButtonAnswer.textContent = "Show answer";
-      cardAnswer.classList.remove("card__answer--active");
+      cardButtonAnswer.textContent = 'Show answer';
+      cardAnswer.classList.remove('card__answer--active');
     }
   });
 }
